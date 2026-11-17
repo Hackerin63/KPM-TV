@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.arun.aurora.LiveWallpaperView android:id="@+id/wallpaper"
+        android:layout_width="match_parent" android:layout_height="match_parent" />
+    <View android:layout_width="match_parent" android:layout_height="300dp"
+        android:layout_gravity="bottom" android:background="@drawable/scrim" />
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingStart="48dp" android:paddingEnd="48dp" android:paddingTop="22dp">
+        <TextView android:id="@+id/clock" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" android:textSize="34sp" android:textStyle="bold" />
+        <TextView android:id="@+id/date" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_below="@id/clock" android:textColor="@color/text_secondary" android:textSize="14sp" />
+        <LinearLayout android:id="@+id/topIcons" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" android:orientation="horizontal" android:gravity="center_vertical" />
+    </RelativeLayout>
+    <LinearLayout android:id="@+id/panel" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_gravity="bottom" android:orientation="vertical" android:paddingBottom="14dp">
+        <TextView android:id="@+id/tvTitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center" android:textColor="@color/text_primary" android:textSize="30sp" android:textStyle="bold" />
+        <TextView android:id="@+id/tvSub" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center" android:textColor="@color/text_secondary" android:textSize="14sp" />
+        <LinearLayout android:id="@+id/catRow" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center" android:paddingTop="10dp" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/slider"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:clipToPadding="false" />
+    </LinearLayout>
+    <FrameLayout android:id="@+id/splash" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#0B0F1A">
+        <TextView android:id="@+id/splashText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:text="KPM TV" android:textColor="@color/text_primary"
+            android:textSize="110sp" android:textStyle="bold" android:letterSpacing="0.12" />
+    </FrameLayout>
+</FrameLayout>
